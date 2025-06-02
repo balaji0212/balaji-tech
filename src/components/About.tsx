@@ -1,33 +1,25 @@
-
 const About = () => {
-  const education = [
-    {
-      degree: "B.E. in Electronics and Communication Engineering",
-      institution: "Sri Ramakrishna Engineering College",
-      year: "2021–2025",
-      grade: "GPA: 7/10",
-      icon: "🎓"
-    },
-    {
-      degree: "Higher Secondary Certificate (HSC)",
-      institution: "Vallalar MHSS",
-      year: "2020–2021",
-      grade: "87.83%",
-      icon: "📚"
-    },
-    {
-      degree: "Secondary School Leaving Certificate (SSLC)",
-      institution: "Vallalar MHSS",
-      year: "2018–2019",
-      grade: "86.8%",
-      icon: "📝"
-    }
-  ];
-
+  const education = [{
+    degree: "B.E. in Electronics and Communication Engineering",
+    institution: "Sri Ramakrishna Engineering College",
+    year: "2021–2025",
+    grade: "GPA: 7/10",
+    icon: "🎓"
+  }, {
+    degree: "Higher Secondary Certificate (HSC)",
+    institution: "Vallalar MHSS",
+    year: "2020–2021",
+    grade: "87.83%",
+    icon: "📚"
+  }, {
+    degree: "Secondary School Leaving Certificate (SSLC)",
+    institution: "Vallalar MHSS",
+    year: "2018–2019",
+    grade: "86.8%",
+    icon: "📝"
+  }];
   const interests = ["AI", "Embedded Systems", "Smart Energy", "Real-Time Vision"];
-
-  return (
-    <section id="about" className="py-20 px-4 relative">
+  return <section id="about" className="py-20 px-4 relative">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl animate-float"></div>
@@ -43,9 +35,7 @@ const About = () => {
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
             About <span className="bg-gradient-to-r from-teal-400 to-blue-400 bg-clip-text text-transparent">Me</span>
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Passionate about creating intelligent systems that bridge the gap between hardware and software
-          </p>
+          <p className="text-gray-400 max-w-3xl mx-auto text-xl">A passionate Electronics and Communication Engineering graduate with expertise in Verilog HDL, embedded systems, and IoT hardware design. Skilled in developing fault tolerant digital systems, AI-driven computer vision applications, and smart energy solutions using ESP32. Combines strong technical proficiency in Python, C, and backend development with a drive for innovative and sustainable embedded solutions.</p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-16">
@@ -75,14 +65,9 @@ const About = () => {
                 <h4 className="text-xl font-semibold text-white">Key Interests</h4>
               </div>
               <div className="flex flex-wrap gap-3">
-                {interests.map((interest, index) => (
-                  <span
-                    key={index}
-                    className="group bg-gradient-to-r from-teal-500/20 to-blue-500/20 text-teal-300 px-4 py-2 rounded-xl text-sm border border-teal-500/30 hover:from-teal-500/30 hover:to-blue-500/30 hover:scale-105 transition-all duration-200 backdrop-blur-sm"
-                  >
+                {interests.map((interest, index) => <span key={index} className="group bg-gradient-to-r from-teal-500/20 to-blue-500/20 text-teal-300 px-4 py-2 rounded-xl text-sm border border-teal-500/30 hover:from-teal-500/30 hover:to-blue-500/30 hover:scale-105 transition-all duration-200 backdrop-blur-sm">
                     {interest}
-                  </span>
-                ))}
+                  </span>)}
               </div>
             </div>
           </div>
@@ -96,11 +81,7 @@ const About = () => {
               <h3 className="text-2xl font-semibold text-white">Education</h3>
             </div>
             <div className="space-y-6">
-              {education.map((edu, index) => (
-                <div
-                  key={index}
-                  className="group bg-slate-800/30 backdrop-blur-sm p-6 rounded-2xl border border-slate-700/50 hover:border-teal-500/30 transition-all duration-300 hover:scale-[1.02] relative overflow-hidden"
-                >
+              {education.map((edu, index) => <div key={index} className="group bg-slate-800/30 backdrop-blur-sm p-6 rounded-2xl border border-slate-700/50 hover:border-teal-500/30 transition-all duration-300 hover:scale-[1.02] relative overflow-hidden">
                   {/* Background gradient */}
                   <div className="absolute inset-0 bg-gradient-to-r from-teal-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   
@@ -121,14 +102,11 @@ const About = () => {
                       </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
