@@ -102,8 +102,12 @@ const Hero = () => {
               </div>
               
               {/* Profile Picture Container */}
-              <div className="absolute inset-2 rounded-full bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center border border-slate-700/50 backdrop-blur-sm">
-                <div className="text-8xl lg:text-9xl">👨‍💻</div>
+              <div className="absolute inset-2 rounded-full bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center border border-slate-700/50 backdrop-blur-sm overflow-hidden">
+                <img 
+                  src="https://i.ibb.co/PGCqj6V/profile-pic.jpg" 
+                  alt="Balaji S - Electronics & Communication Engineer"
+                  className="w-full h-full object-cover rounded-full"
+                />
               </div>
             </div>
 
