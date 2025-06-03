@@ -75,7 +75,7 @@ const Projects = () => {
                   </div>
                 </div>
                 
-                <p className="text-gray-300 leading-relaxed mb-6 text-center">
+                <p className="text-gray-300 leading-relaxed mb-6 text-justify">
                   {project.description}
                 </p>
 
