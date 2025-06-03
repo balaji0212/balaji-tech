@@ -18,7 +18,7 @@ const About = () => {
     grade: "86.8%",
     icon: "📝"
   }];
-  const interests = ["AI", "Embedded Systems", "Smart Energy", "Real-Time Vision"];
+  const interests = ["Artificial Intelligence", "Deep Learning", "Computer Vision", "IoT-Based Automation", "Smart Energy Systems", "Hardware–Software Integration", "Real-Time AI Applications"];
   return <section id="about" className="py-20 px-4 relative">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -48,11 +48,11 @@ const About = () => {
                 </div>
                 <h3 className="text-2xl font-semibold text-white">My Journey</h3>
               </div>
-              <p className="leading-relaxed mb-6 text-gray-300">My fascination with technology began early, sparked by a curiosity for how things work. This led me to pursue Electronics and Communication Engineering, where I discovered my passion for embedded systems and hardware design. I thrived on turning theoretical concepts into real-world applications, from IoT devices to fault-tolerant computing architectures. 
+              <p className="leading-relaxed mb-6 text-gray-300">My fascination with technology began early, sparked by a curiosity for how things work. This led me to pursue Electronics and Communication Engineering, where I discovered my passion for embedded systems and hardware design. I thrived on turning theoretical concepts into real-world applications, from IoT devices to fault-tolerant computing architectures. 
 
 
-As I deepened my knowledge, I ventured into AI and machine learning, developing systems like real-time emotion recognition using deep learning. Each project taught me the power of interdisciplinary thinking—blending hardware efficiency with software intelligence. My work on smart energy solutions reinforced my belief in technology as a tool for sustainability. Today, I stand at the intersection of innovation and practicality, driven by challenges that demand creative problem-solving. The journey hasn’t always been easy, but every obstacle has shaped my resilience and adaptability. Looking ahead, I’m excited to keep pushing boundaries, learning relentlessly, and building solutions that make a meaningful difference.</p>
-              <p className="text-gray-300 leading-relaxed">Today, I stand at the intersection of innovation and practicality, driven by challenges that demand creative problem-solving. The journey hasn’t always been easy, but every obstacle has shaped my resilience and adaptability. Looking ahead, I’m excited to keep pushing boundaries, learning relentlessly, and building solutions that make a meaningful difference.</p>
+As I deepened my knowledge, I ventured into AI and machine learning, developing systems like real-time emotion recognition using deep learning. Each project taught me the power of interdisciplinary thinking—blending hardware efficiency with software intelligence. My work on smart energy solutions reinforced my belief in technology as a tool for sustainability. Today, I stand at the intersection of innovation and practicality, driven by challenges that demand creative problem-solving. The journey hasn't always been easy, but every obstacle has shaped my resilience and adaptability. Looking ahead, I'm excited to keep pushing boundaries, learning relentlessly, and building solutions that make a meaningful difference.</p>
+              <p className="text-gray-300 leading-relaxed">Today, I stand at the intersection of innovation and practicality, driven by challenges that demand creative problem-solving. The journey hasn't always been easy, but every obstacle has shaped my resilience and adaptability. Looking ahead, I'm excited to keep pushing boundaries, learning relentlessly, and building solutions that make a meaningful difference.</p>
             </div>
 
             {/* Key Interests */}
