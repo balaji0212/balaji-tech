@@ -1,10 +1,10 @@
-
 import { useState } from "react";
 import { Phone, Mail, MapPin, Send, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -12,15 +12,46 @@ const Contact = () => {
     email: "",
     message: ""
   });
+  const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for your message. I'll get back to you soon!",
-    });
-    setFormData({ name: "", email: "", message: "" });
+    setIsLoading(true);
+
+    try {
+      // Initialize EmailJS with your public key
+      emailjs.init("0EL3LhFuAzwFGp-Ww");
+
+      // Send email using your EmailJS credentials
+      await emailjs.send(
+        "service_ykzas38", // Your service ID
+        "template_isy3ayp", // Your template ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+          to_email: "balaji022212@gmail.com"
+        }
+      );
+
+      toast({
+        title: "Message Sent Successfully!",
+        description: "Thank you for your message. I'll get back to you soon!",
+      });
+      
+      // Clear form only after successful send
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error('EmailJS Error:', error);
+      toast({
+        title: "Failed to Send Message",
+        description: "There was an error sending your message. Please try again.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -135,7 +166,8 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="bg-slate-700/50 border-slate-600/50 text-white placeholder-gray-400 focus:border-teal-500 focus:ring-teal-500/20 h-12 rounded-xl backdrop-blur-sm"
+                  disabled={isLoading}
+                  className="bg-slate-700/50 border-slate-600/50 text-white placeholder-gray-400 focus:border-teal-500 focus:ring-teal-500/20 h-12 rounded-xl backdrop-blur-sm disabled:opacity-50"
                 />
               </div>
               
@@ -147,7 +179,8 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="bg-slate-700/50 border-slate-600/50 text-white placeholder-gray-400 focus:border-teal-500 focus:ring-teal-500/20 h-12 rounded-xl backdrop-blur-sm"
+                  disabled={isLoading}
+                  className="bg-slate-700/50 border-slate-600/50 text-white placeholder-gray-400 focus:border-teal-500 focus:ring-teal-500/20 h-12 rounded-xl backdrop-blur-sm disabled:opacity-50"
                 />
               </div>
               
@@ -158,17 +191,28 @@ const Contact = () => {
                   value={formData.message}
                   onChange={handleChange}
                   required
+                  disabled={isLoading}
                   rows={6}
-                  className="bg-slate-700/50 border-slate-600/50 text-white placeholder-gray-400 focus:border-teal-500 focus:ring-teal-500/20 resize-none rounded-xl backdrop-blur-sm"
+                  className="bg-slate-700/50 border-slate-600/50 text-white placeholder-gray-400 focus:border-teal-500 focus:ring-teal-500/20 resize-none rounded-xl backdrop-blur-sm disabled:opacity-50"
                 />
               </div>
               
               <Button
                 type="submit"
-                className="w-full bg-gradient-to-r from-teal-500 to-blue-500 hover:from-teal-600 hover:to-blue-600 text-white py-4 rounded-xl transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-teal-500/25 font-semibold text-lg"
+                disabled={isLoading}
+                className="w-full bg-gradient-to-r from-teal-500 to-blue-500 hover:from-teal-600 hover:to-blue-600 text-white py-4 rounded-xl transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-teal-500/25 font-semibold text-lg disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
               >
-                <Send className="w-5 h-5 mr-2" />
-                Send Message
+                {isLoading ? (
+                  <>
+                    <div className="w-5 h-5 mr-2 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+                    Sending...
+                  </>
+                ) : (
+                  <>
+                    <Send className="w-5 h-5 mr-2" />
+                    Send Message
+                  </>
+                )}
               </Button>
             </form>
           </div>
