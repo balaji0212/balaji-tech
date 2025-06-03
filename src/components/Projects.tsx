@@ -75,7 +75,7 @@ const Projects = () => {
                   </div>
                 </div>
                 
-                <p className="text-gray-300 leading-relaxed mb-6 text-justify">
+                <p className="text-gray-300 leading-relaxed mb-6 text-center">
                   {project.description}
                 </p>
 
@@ -84,7 +84,7 @@ const Projects = () => {
                     <div className="w-3 h-3 bg-green-400 rounded-full"></div>
                     <p className="text-green-400 text-sm font-medium">Impact & Results</p>
                   </div>
-                  <p className="text-gray-300 text-sm text-justify">{project.impact}</p>
+                  <p className="text-gray-300 text-sm text-center">{project.impact}</p>
                 </div>
 
                 <div className="flex flex-wrap gap-2">
