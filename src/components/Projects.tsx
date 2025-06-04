@@ -1,4 +1,3 @@
-
 const Projects = () => {
   const projects = [{
     title: "Fault Tolerant Matrix Computation on Systolic Arrays",
@@ -33,7 +32,6 @@ const Projects = () => {
     icon: "🧠",
     color: "from-purple-500 to-pink-500"
   }];
-
   return <section id="projects" className="py-20 px-4 relative">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -67,7 +65,7 @@ const Projects = () => {
                       {project.icon}
                     </div>
                     <div>
-                      <h3 className="text-2xl font-semibold text-white group-hover:text-teal-400 transition-colors duration-200">
+                      <h3 className="text-2xl font-semibold text-white group-hover:text-teal-400 transition-colors duration-200 text-left">
                         {project.title}
                       </h3>
                       <span className="text-teal-400 text-sm bg-teal-500/20 px-3 py-1 rounded-full border border-teal-500/30">
@@ -100,5 +98,4 @@ const Projects = () => {
       </div>
     </section>;
 };
-
 export default Projects;
