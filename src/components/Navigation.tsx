@@ -7,9 +7,14 @@ const Navigation = () => {
 
   const navItems = [
     { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Skills", href: "#skills" },
-    { name: "Projects", href: "#projects" },
+    { name: "About Me", href: "#about" },
+    { name: "My Journey", href: "#journey" },
+    { name: "Technical Skills", href: "#skills" },
+    { name: "Education", href: "#education" },
+    { name: "Featured Projects", href: "#projects" },
+    { name: "Key Interests", href: "#interests" },
+    { name: "Languages", href: "#languages" },
+    { name: "Certifications", href: "#certifications" },
     { name: "Services", href: "#services" },
     { name: "Contact", href: "#contact" },
   ];
@@ -23,12 +28,12 @@ const Navigation = () => {
           </div>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden lg:flex space-x-6 overflow-x-auto">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="text-gray-300 hover:text-teal-400 transition-colors duration-200"
+                className="text-gray-300 hover:text-teal-400 transition-colors duration-200 whitespace-nowrap text-sm"
               >
                 {item.name}
               </a>
@@ -46,7 +51,7 @@ const Navigation = () => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-300 hover:text-white"
@@ -58,8 +63,8 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden py-4">
-            <div className="flex flex-col space-y-4">
+          <div className="lg:hidden py-4">
+            <div className="flex flex-col space-y-4 max-h-80 overflow-y-auto">
               {navItems.map((item) => (
                 <a
                   key={item.name}
