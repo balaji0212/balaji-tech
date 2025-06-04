@@ -1,37 +1,39 @@
+
 const Projects = () => {
   const projects = [{
-    title: "IoT-Based Smart Energy Meter",
-    date: "2024",
-    description: "Developed an intelligent energy monitoring system using ESP32 microcontrollers and cloud integration for real-time energy consumption tracking and automated billing.",
-    tags: ["ESP32", "IoT", "Python", "Cloud Integration"],
-    impact: "Reduced manual meter reading by 100% and improved billing accuracy",
-    icon: "⚡",
-    color: "from-green-500 to-teal-500"
-  }, {
-    title: "Emotion Detection Using Deep Learning",
-    date: "2024",
-    description: "Implemented a real-time emotion recognition system using CNN and FER2013 dataset with OpenCV for computer vision applications.",
-    tags: ["Python", "OpenCV", "CNN", "Deep Learning"],
-    impact: "Achieved 85% accuracy in real-time emotion detection",
-    icon: "🧠",
-    color: "from-purple-500 to-pink-500"
-  }, {
-    title: "Fault-Tolerant Matrix Computation",
-    date: "2023",
-    description: "Designed and implemented fault-tolerant algorithms for matrix operations using Verilog HDL, ensuring system reliability in critical applications.",
-    tags: ["Verilog HDL", "FPGA", "Fault Tolerance", "Hardware Design"],
-    impact: "Improved system reliability by 40% in critical computations",
+    title: "Fault Tolerant Matrix Computation on Systolic Arrays",
+    date: "Feb 2025 - May 2025",
+    description: "Published a research paper proposing a hybrid error detection and correction method combining Light ABFT, Hamming code, and parity codes. Implemented fault-tolerant matrix multiplication in Verilog HDL and validated error resilience using Vivado simulation for AI accelerators, embedded systems, and high-performance computing.",
+    tags: ["Verilog HDL", "FPGA", "Fault Tolerance", "Vivado", "AI Accelerators", "Research"],
+    impact: "Published research paper on hybrid error detection and correction methods",
     icon: "🛡️",
     color: "from-blue-500 to-indigo-500"
   }, {
-    title: "OpenWISP Monitoring (Internship)",
-    date: "2023",
-    description: "Contributed to network monitoring solutions using OpenWISP framework, implementing real-time monitoring dashboards and alert systems.",
-    tags: ["Network Monitoring", "Python", "Django", "InfluxDB"],
-    impact: "Enhanced network uptime monitoring for 500+ devices",
+    title: "OpenWISP Monitoring: Real-Time Network Health Insights",
+    date: "Feb 2025",
+    description: "Developed and implemented network monitoring checks (Ping, Iperf3, WiFi Clients) using Python and Django, ensuring real-time network health assessment of devices. Utilized InfluxDB for efficient time-series data storage and retrieval, implementing caching strategies to enhance data access speed and reduce database load. Established alerting systems to notify stakeholders of critical device statuses.",
+    tags: ["Python", "Django", "InfluxDB", "Network Monitoring", "Real-time Systems"],
+    impact: "Improved response times to network issues and enhanced overall system reliability",
     icon: "📊",
     color: "from-orange-500 to-red-500"
+  }, {
+    title: "IoT-Based Smart Energy Meter for Energy Efficiency",
+    date: "Jun 2023 - Apr 2024",
+    description: "Developed an ESP32-based smart energy meter integrated with PIR sensors for occupancy detection, reducing unnecessary power consumption by 30%. Implemented real-time energy monitoring on an I2C LCD and cloud dashboard (Ubidots), with automatic email alerts when consumption exceeds thresholds.",
+    tags: ["ESP32", "IoT", "PIR Sensors", "I2C LCD", "Ubidots", "Cloud Integration"],
+    impact: "Reduced unnecessary power consumption by 30% with automated monitoring",
+    icon: "⚡",
+    color: "from-green-500 to-teal-500"
+  }, {
+    title: "Video Based Emotion Detection Using Deep Learning",
+    date: "Jun 2022 - May 2023",
+    description: "Built a real-time emotion recognition system using OpenCV and Convolutional Neural Networks (CNN) trained on the FER2013 dataset, achieving 89% classification accuracy. Optimized real-time processing with grayscale conversion and histogram equalization, enabling smooth webcam-based mood detection without external hardware.",
+    tags: ["Python", "OpenCV", "CNN", "Deep Learning", "FER2013", "Real-time Processing"],
+    impact: "Achieved 89% accuracy in real-time emotion detection with optimized processing",
+    icon: "🧠",
+    color: "from-purple-500 to-pink-500"
   }];
+
   return <section id="projects" className="py-20 px-4 relative">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -49,7 +51,7 @@ const Projects = () => {
             Featured <span className="bg-gradient-to-r from-teal-400 to-blue-400 bg-clip-text text-transparent">Projects</span>
           </h2>
           <p className="text-xl text-gray-400">
-            Showcase of innovative solutions in embedded systems and IoT
+            Research and development in embedded systems, IoT, and AI applications
           </p>
         </div>
 
@@ -98,4 +100,5 @@ const Projects = () => {
       </div>
     </section>;
 };
+
 export default Projects;
