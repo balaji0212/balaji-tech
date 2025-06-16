@@ -1,5 +1,5 @@
 
-import { ArrowRight, Download, Phone, Mail, MapPin, Sparkles, Code, Cpu, Database, Zap, Circuit, Brain, Atom } from "lucide-react";
+import { ArrowRight, Download, Phone, Mail, MapPin, Sparkles, Code, Cpu, Database, Zap, Microchip, Brain, Atom } from "lucide-react";
 import { useState, useEffect } from "react";
 
 const Hero = () => {
@@ -192,7 +192,7 @@ const Hero = () => {
               className="group relative bg-gradient-to-r from-teal-500 to-blue-500 hover:from-teal-600 hover:to-blue-600 text-white px-8 py-4 rounded-xl flex items-center gap-3 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-teal-500/25 justify-center sm:justify-start font-semibold overflow-hidden pulse-glow"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-teal-400 to-blue-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300 tech-scan"></div>
-              <Circuit size={20} className="group-hover:animate-bounce" />
+              <Microchip size={20} className="group-hover:animate-bounce" />
               Initialize Quantum Link
               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform duration-200" />
             </a>
@@ -205,23 +205,6 @@ const Hero = () => {
               <Download size={20} className="group-hover:animate-bounce" /> 
               Neural Profile Data
             </a>
-          </div>
-
-          {/* Advanced Quantum Tech Stats */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-8">
-            {[
-              { value: "4+", label: "Quantum Projects", color: "text-teal-400" },
-              { value: "89%", label: "Neural Accuracy", color: "text-blue-400" },
-              { value: "30%", label: "Energy Optimized", color: "text-purple-400" },
-              { value: "∞", label: "Processing Power", color: "text-green-400" }
-            ].map((stat, index) => (
-              <div key={index} className="text-center glass-morphism p-4 rounded-xl border border-slate-700/30 hover:border-teal-400/30 transition-all duration-300 group">
-                <div className={`text-2xl font-bold ${stat.color} mb-1 group-hover:scale-110 transition-transform duration-300 text-glow`}>
-                  {stat.value}
-                </div>
-                <div className="text-sm text-gray-400 font-medium">{stat.label}</div>
-              </div>
-            ))}
           </div>
 
           {/* Enhanced Quantum Contact Info */}
@@ -255,45 +238,17 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Enhanced Quantum Profile Section */}
-        <div className="flex justify-center lg:justify-end relative">
-          <div className="relative">
-            {/* Advanced Quantum Profile Container */}
-            <div className="relative w-80 h-80 lg:w-[450px] lg:h-[450px]">
-              {/* Multi-dimensional quantum borders */}
-              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-teal-400 via-blue-500 to-purple-500 animate-spin-slow p-1 pulse-glow">
-                <div className="w-full h-full rounded-full bg-slate-900"></div>
-              </div>
-              <div className="absolute inset-1 rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-teal-400 animate-spin-slow p-1" style={{ animationDirection: 'reverse', animationDuration: '12s' }}>
-                <div className="w-full h-full rounded-full bg-slate-900/50 backdrop-blur-sm"></div>
-              </div>
-              <div className="absolute inset-2 rounded-full bg-gradient-to-r from-cyan-400 via-violet-500 to-emerald-400 animate-spin-slow p-1" style={{ animationDuration: '8s' }}>
-                <div className="w-full h-full rounded-full bg-slate-900/30 backdrop-blur-sm"></div>
-              </div>
-              
-              {/* Holographic Profile Picture Container */}
-              <div className="absolute inset-4 rounded-full glass-morphism-dark flex items-center justify-center border border-slate-700/50 backdrop-blur-sm overflow-hidden shadow-2xl hologram">
+        {/* Simple Profile Section */}
+        <div className="flex justify-center lg:justify-end">
+          <div className="relative w-80 h-80 lg:w-96 lg:h-96">
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-teal-400 to-blue-500 p-1">
+              <div className="w-full h-full rounded-full bg-slate-900 flex items-center justify-center overflow-hidden">
                 <img 
                   src="/lovable-uploads/2dd13a16-ca9b-4703-ba5d-91422e1e0705.png" 
-                  alt="Balaji S - Quantum Computing Engineer"
+                  alt="Balaji S - Electronics & Communication Engineer"
                   className="w-full h-full object-cover rounded-full"
                 />
-                <div className="absolute inset-0 bg-gradient-to-br from-teal-400/20 via-transparent to-purple-400/20 rounded-full"></div>
               </div>
-            </div>
-
-            {/* Advanced Floating Quantum Tech Icons */}
-            <div className="absolute -top-8 -right-8 w-16 h-16 glass-morphism bg-gradient-to-br from-teal-400/30 to-blue-500/30 rounded-2xl border border-teal-400/30 flex items-center justify-center animate-float shadow-lg pulse-glow">
-              <Atom className="text-teal-400 text-2xl animate-spin" />
-            </div>
-            <div className="absolute -bottom-4 -left-8 w-14 h-14 glass-morphism bg-gradient-to-br from-purple-400/30 to-pink-500/30 rounded-xl border border-purple-400/30 flex items-center justify-center animate-float delay-1000 shadow-lg">
-              <Brain className="text-purple-400 text-xl animate-pulse" />
-            </div>
-            <div className="absolute top-1/2 -right-12 w-12 h-12 glass-morphism bg-gradient-to-br from-blue-400/30 to-cyan-500/30 rounded-lg border border-blue-400/30 flex items-center justify-center animate-float delay-500 shadow-lg">
-              <Circuit className="text-blue-400 text-lg" />
-            </div>
-            <div className="absolute top-1/4 -left-6 w-10 h-10 glass-morphism bg-gradient-to-br from-emerald-400/30 to-green-500/30 rounded-lg border border-emerald-400/30 flex items-center justify-center animate-float delay-700 shadow-lg">
-              <Cpu className="text-emerald-400 text-sm" />
             </div>
           </div>
         </div>

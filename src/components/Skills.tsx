@@ -1,6 +1,5 @@
-
 import { useState } from "react";
-import { Atom, Brain, Circuit, Zap, Shield, Cpu, Database, Globe, Waves, Binary } from "lucide-react";
+import { Atom, Brain, Microchip, Zap, Shield, Cpu, Database, Globe, Waves, Binary } from "lucide-react";
 
 const Skills = () => {
   const [hoveredSkill, setHoveredSkill] = useState<number | null>(null);
@@ -37,7 +36,7 @@ const Skills = () => {
       title: "Embedded & IoT Ecosystems",
       skills: ["ESP32", "RISC-V", "LoRaWAN", "6G Protocols", "Digital Twins"],
       color: "from-orange-500 to-red-500",
-      icon: <Circuit className="w-8 h-8" />,
+      icon: <Microchip className="w-8 h-8" />,
       level: 94,
       description: "Next-gen IoT with 6G connectivity and digital twin technology",
       techLevel: "Future-Ready"
@@ -82,7 +81,6 @@ const Skills = () => {
 
   return (
     <section id="skills" className="py-20 px-4 bg-slate-800/30 relative overflow-hidden">
-      {/* Advanced Quantum Background Effects */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 right-1/4 w-72 h-72 bg-purple-500/5 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-teal-500/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
@@ -218,27 +216,6 @@ const Skills = () => {
                     </div>
                   ))}
                 </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Advanced Quantum Technology Stats */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
-          {[
-            { label: "Quantum Years", value: "4+", icon: <Atom className="w-6 h-6 animate-spin" />, color: "text-purple-400" },
-            { label: "Neural Models", value: "15+", icon: <Brain className="w-6 h-6 animate-pulse" />, color: "text-blue-400" },
-            { label: "Tech Domains", value: "8", icon: <Circuit className="w-6 h-6" />, color: "text-teal-400" },
-            { label: "AI Precision", value: "95%", icon: <Zap className="w-6 h-6" />, color: "text-green-400" }
-          ].map((stat, index) => (
-            <div key={index} className="text-center p-6 glass-morphism rounded-2xl border border-slate-700/50 hover:border-teal-500/30 transition-all duration-300 group relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-teal-400/5 via-blue-400/5 to-purple-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 tech-scan"></div>
-              <div className="relative z-10">
-                <div className="flex justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
-                  <div className={`${stat.color}`}>{stat.icon}</div>
-                </div>
-                <div className={`text-2xl font-bold ${stat.color} mb-1 text-glow`}>{stat.value}</div>
-                <div className="text-sm text-gray-400 font-medium">{stat.label}</div>
               </div>
             </div>
           ))}
