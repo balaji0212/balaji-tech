@@ -2,8 +2,8 @@
 const Certifications = () => {
   const certifications = [
     "Python Programming",
-    "Backend Web Development (MySQL, PHP)",
-    "PLC Design"
+    "PLC Design", 
+    "Forage Simulations (Deloitte Analytics, Software Engineering, Quantitative Research, GenAI)"
   ];
 
   return (

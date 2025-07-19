@@ -6,52 +6,44 @@ const Skills = () => {
 
   const skillCategories = [
     {
-      title: "Programming & HDL",
-      skills: ["Python", "C/C++", "Verilog HDL", "SystemVerilog"],
+      title: "Programming Languages",
+      skills: ["Python", "C", "Verilog HDL"],
       color: "from-blue-500 to-cyan-500",
       icon: "💻",
       level: 90,
-      description: "Advanced programming with hardware description languages"
+      description: "Core programming and hardware description languages"
     },
     {
-      title: "Web & Backend",
-      skills: ["PHP", "MySQL", "Django", "REST APIs"],
-      color: "from-green-500 to-emerald-500",
-      icon: "🌐",
-      level: 85,
-      description: "Full-stack development and database management"
-    },
-    {
-      title: "Embedded & IoT",
-      skills: ["ESP32", "PIR Sensors", "I2C LCD", "Real-time Systems"],
-      color: "from-purple-500 to-pink-500",
-      icon: "⚡",
-      level: 95,
-      description: "IoT hardware integration and real-time processing"
-    },
-    {
-      title: "AI & Machine Learning",
-      skills: ["OpenCV", "CNN", "Deep Learning", "Computer Vision"],
+      title: "ML/AI Tools",
+      skills: ["Scikit-learn", "NumPy", "Pandas", "OpenCV", "CNN", "TensorFlow", "PyTorch"],
       color: "from-orange-500 to-red-500",
       icon: "🧠",
       level: 89,
-      description: "AI-driven applications and neural networks"
+      description: "Machine learning and artificial intelligence frameworks"
     },
     {
-      title: "Development Tools",
-      skills: ["Vivado", "Git", "Ubidots", "InfluxDB"],
+      title: "Databases",
+      skills: ["SQL", "MySQL", "InfluxDB", "Vector DBs (familiar)"],
+      color: "from-green-500 to-emerald-500",
+      icon: "🗄️",
+      level: 85,
+      description: "Database management and data storage solutions"
+    },
+    {
+      title: "Tools & Platforms",
+      skills: ["Git", "Docker (learning)", "Android Studio", "Vivado", "Tableau", "Excel", "Linux CLI", "AWS (familiar)", "GCP (familiar)"],
       color: "from-teal-500 to-blue-500",
       icon: "🛠️",
       level: 88,
-      description: "Professional development and deployment tools"
+      description: "Development tools and cloud platforms"
     },
     {
-      title: "Specialized Domains",
-      skills: ["FPGA Design", "Fault Tolerance", "Smart Energy", "Network Monitoring"],
-      color: "from-indigo-500 to-purple-500",
+      title: "Concepts",
+      skills: ["Feature Engineering", "Data Preprocessing", "ML Lifecycle", "Model Training", "Model Deployment", "Computer Vision", "NLP", "REST APIs", "Unit Testing (basic)", "Data Structures & Algorithms", "MLOps (familiar)"],
+      color: "from-purple-500 to-pink-500",
       icon: "🎯",
       level: 92,
-      description: "Advanced engineering and system optimization"
+      description: "Advanced concepts and methodologies"
     }
   ];
 
@@ -171,8 +163,8 @@ const Skills = () => {
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
           {[
             { label: "Years Experience", value: "4+", icon: "🚀" },
-            { label: "Projects Completed", value: "15+", icon: "💡" },
-            { label: "Technologies Mastered", value: "20+", icon: "⚡" },
+            { label: "Major Projects", value: "4+", icon: "💡" },
+            { label: "Technologies", value: "25+", icon: "⚡" },
             { label: "AI Model Accuracy", value: "89%", icon: "🎯" }
           ].map((stat, index) => (
             <div key={index} className="text-center p-6 bg-slate-800/40 backdrop-blur-sm rounded-2xl border border-slate-700/50 hover:border-teal-500/30 transition-all duration-300 group">

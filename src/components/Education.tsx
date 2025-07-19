@@ -4,23 +4,9 @@ const Education = () => {
     degree: "Bachelor of Engineering in Electronics and Communication Engineering",
     institution: "Sri Ramakrishna Engineering College",
     year: "Aug 2021 - May 2025",
-    grade: "GPA: 7/10",
+    grade: "CGPA: 7/10",
     major: "Major in Electronics and Communication",
     icon: "🎓"
-  }, {
-    degree: "Higher Secondary School Certificate",
-    institution: "Vallalar Matriculation Higher Secondary School",
-    year: "Jun 2020 - Apr 2021",
-    grade: "87.83%",
-    major: "Major in Physics, Chemistry, Mathematics, Biology",
-    icon: "📚"
-  }, {
-    degree: "Secondary School Leaving Certificate",
-    institution: "Vallalar Matriculation Higher Secondary School",
-    year: "Jun 2018 - Apr 2019",
-    grade: "86.8%",
-    major: "Major in Tamil, English, Mathematics, Science, Social Science",
-    icon: "📝"
   }];
 
   return (

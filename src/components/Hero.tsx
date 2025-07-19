@@ -91,10 +91,10 @@ const Hero = () => {
             </div>
             
             <p className="text-lg lg:text-xl text-gray-300 leading-relaxed max-w-2xl">
-              <span className="text-teal-400 font-semibold">Next-generation</span> Electronics & Communication Engineer 
-              architecting <span className="text-blue-400 font-semibold">intelligent embedded systems</span>, 
-              <span className="text-purple-400 font-semibold"> fault-tolerant computing</span>, and 
-              <span className="text-green-400 font-semibold"> AI-driven IoT solutions</span> for tomorrow's challenges.
+              <span className="text-teal-400 font-semibold">Electronics & Communication Engineering graduate</span> with hands-on experience in 
+              <span className="text-blue-400 font-semibold">AI, machine learning, computer vision</span>, and 
+              <span className="text-purple-400 font-semibold">built real-time systems</span>. Proficient in 
+              <span className="text-green-400 font-semibold">Python, TensorFlow, PyTorch, OpenCV, SQL</span> and embedded platforms.
             </p>
           </div>
 
@@ -124,19 +124,19 @@ const Hero = () => {
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-8">
             <div className="text-center">
               <div className="text-2xl font-bold text-teal-400">4+</div>
-              <div className="text-sm text-gray-400">Projects</div>
+              <div className="text-sm text-gray-400">Major Projects</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-blue-400">89%</div>
+              <div className="text-2xl font-bold text-blue-400">7.0</div>
+              <div className="text-sm text-gray-400">CGPA</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-purple-400">89%</div>
               <div className="text-sm text-gray-400">AI Accuracy</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-purple-400">30%</div>
-              <div className="text-sm text-gray-400">Energy Saved</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-green-400">24/7</div>
-              <div className="text-sm text-gray-400">IoT Monitoring</div>
+              <div className="text-2xl font-bold text-green-400">4+</div>
+              <div className="text-sm text-gray-400">Certifications</div>
             </div>
           </div>
 

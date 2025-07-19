@@ -79,8 +79,8 @@ const Contact = () => {
     {
       icon: ExternalLink,
       label: "LinkedIn",
-      value: "balaji021203",
-      href: "https://linkedin.com/in/balaji021203",
+      value: "balaji022103",
+      href: "https://linkedin.com/in/balaji022103",
       color: "from-purple-500 to-pink-500"
     },
     {

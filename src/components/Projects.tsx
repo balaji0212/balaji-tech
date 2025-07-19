@@ -8,22 +8,22 @@ const Projects = () => {
   const projects = [{
     title: "Fault Tolerant Matrix Computation on Systolic Arrays",
     date: "Feb 2025 - May 2025",
-    status: "Published Research",
-    description: "Published a research paper proposing a hybrid error detection and correction method combining Light ABFT, Hamming code, and parity codes. Implemented fault-tolerant matrix multiplication in Verilog HDL and validated error resilience using Vivado simulation for AI accelerators, embedded systems, and high-performance computing.",
-    tags: ["Verilog HDL", "FPGA", "Fault Tolerance", "Vivado", "AI Accelerators", "Research"],
-    impact: "Published research paper on hybrid error detection and correction methods",
-    metrics: { accuracy: "99.9%", performance: "+25%", reliability: "Fault Tolerant" },
+    status: "Current Project",
+    description: "Designed a matrix multiplier with integrated fault-tolerance using Hamming code and ABFT in Vivado. Tailored for AI workload simulations with error resilience and real-time data integrity.",
+    tags: ["Verilog HDL", "FPGA", "Fault Tolerance", "Vivado", "AI Workloads", "ABFT"],
+    impact: "Enhanced AI workload reliability with fault-tolerant computing",
+    metrics: { reliability: "99.9%", performance: "Real-time", integration: "Vivado" },
     icon: "🛡️",
     color: "from-blue-500 to-indigo-500",
     category: "Research & Development"
   }, {
     title: "OpenWISP Monitoring: Real-Time Network Health Insights",
-    date: "Feb 2025",
-    status: "Production Ready",
-    description: "Developed and implemented network monitoring checks (Ping, Iperf3, WiFi Clients) using Python and Django, ensuring real-time network health assessment of devices. Utilized InfluxDB for efficient time-series data storage and retrieval, implementing caching strategies to enhance data access speed and reduce database load. Established alerting systems to notify stakeholders of critical device statuses.",
-    tags: ["Python", "Django", "InfluxDB", "Network Monitoring", "Real-time Systems"],
-    impact: "Improved response times to network issues and enhanced overall system reliability",
-    metrics: { uptime: "99.9%", latency: "-40%", coverage: "100%" },
+    date: "Dec 2023 - Jan 2024",
+    status: "Completed",
+    description: "Created a web-based network diagnostics tool with real-time visualization of Wi-Fi performance metrics. Automated data logging and visual alerts.",
+    tags: ["Python", "Django", "Network Monitoring", "Real-time", "Web Development"],
+    impact: "Improved network diagnostics with real-time monitoring and alerts",
+    metrics: { uptime: "Real-time", diagnostics: "Automated", alerts: "Visual" },
     icon: "📊",
     color: "from-orange-500 to-red-500",
     category: "Network Engineering"
@@ -31,21 +31,21 @@ const Projects = () => {
     title: "IoT-Based Smart Energy Meter for Energy Efficiency",
     date: "Jun 2023 - Apr 2024",
     status: "Deployed",
-    description: "Developed an ESP32-based smart energy meter integrated with PIR sensors for occupancy detection, reducing unnecessary power consumption by 30%. Implemented real-time energy monitoring on an I2C LCD and cloud dashboard (Ubidots), with automatic email alerts when consumption exceeds thresholds.",
-    tags: ["ESP32", "IoT", "PIR Sensors", "I2C LCD", "Ubidots", "Cloud Integration"],
-    impact: "Reduced unnecessary power consumption by 30% with automated monitoring",
-    metrics: { efficiency: "+30%", monitoring: "Real-time", alerts: "Automated" },
+    description: "Developed a real-time power monitoring system using PIR for motion sensing and cloud-based dashboards for visualization. Integrated email alerts for usage anomalies.",
+    tags: ["ESP32", "IoT", "PIR Sensors", "Cloud Dashboards", "Email Alerts"],
+    impact: "Enhanced energy efficiency with automated monitoring and alerts",
+    metrics: { monitoring: "Real-time", sensing: "PIR", alerts: "Email" },
     icon: "⚡",
     color: "from-green-500 to-teal-500",
     category: "IoT & Embedded"
   }, {
     title: "Video Based Emotion Detection Using Deep Learning",
     date: "Jun 2022 - May 2023",
-    status: "AI Model Trained",
-    description: "Built a real-time emotion recognition system using OpenCV and Convolutional Neural Networks (CNN) trained on the FER2013 dataset, achieving 89% classification accuracy. Optimized real-time processing with grayscale conversion and histogram equalization, enabling smooth webcam-based mood detection without external hardware.",
-    tags: ["Python", "OpenCV", "CNN", "Deep Learning", "FER2013", "Real-time Processing"],
-    impact: "Achieved 89% accuracy in real-time emotion detection with optimized processing",
-    metrics: { accuracy: "89%", fps: "30+", latency: "<100ms" },
+    status: "Completed",
+    description: "Built a real-time facial emotion classifier using CNN trained on FER2013. Integrated OpenCV for live camera feed analysis. Achieved 89% validation accuracy. Involved in data preprocessing, feature extraction, and real-time model inference.",
+    tags: ["Python", "OpenCV", "CNN", "TensorFlow", "FER2013", "Deep Learning"],
+    impact: "Achieved 89% accuracy in real-time emotion detection",
+    metrics: { accuracy: "89%", processing: "Real-time", dataset: "FER2013" },
     icon: "🧠",
     color: "from-purple-500 to-pink-500",
     category: "AI & Machine Learning"
@@ -183,9 +183,9 @@ const Projects = () => {
         <div className="mt-16 text-center">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
-              { value: "4+", label: "Research Projects", color: "text-blue-400" },
-              { value: "89%", label: "AI Accuracy", color: "text-green-400" },
-              { value: "30%", label: "Energy Saved", color: "text-teal-400" },
+              { value: "4+", label: "Major Projects", color: "text-blue-400" },
+              { value: "89%", label: "AI Model Accuracy", color: "text-green-400" },
+              { value: "Real-time", label: "Processing", color: "text-teal-400" },
               { value: "99.9%", label: "System Reliability", color: "text-purple-400" }
             ].map((stat, index) => (
               <div key={index} className="p-6 bg-slate-800/40 backdrop-blur-sm rounded-2xl border border-slate-700/50 hover:border-teal-500/30 transition-all duration-300 group">
